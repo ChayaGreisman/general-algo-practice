@@ -20,7 +20,6 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3],3)
 
 
 // O(n)
-
 function maxSubarraySum(arr, num){
     let maxSum = 0;
     let tempSum = 0;
@@ -30,8 +29,8 @@ function maxSubarraySum(arr, num){
     }
     tempSum = maxSum;
     for (let i = num; i < arr.length; i++) {
-    tempSum = tempSum - arr[i - num] + arr[i];
-    maxSum = Math.max(maxSum, tempSum);
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
     }
     return maxSum;
 }
