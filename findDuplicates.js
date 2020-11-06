@@ -21,3 +21,6 @@ function findDuplicates(arr1,arr2){
     }
     return arr
 }
+
+// binary search
+// O(N*log M)
