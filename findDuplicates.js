@@ -24,3 +24,28 @@ function findDuplicates(arr1,arr2){
 
 // binary search
 // O(N*log M)
+
+function findDuplicates(arr1, arr2) {
+    let arr = [];
+    
+    for (let i=0; i<arr1.length; i++){
+      let search = binarySearch(arr2, arr1[i])
+      if ( search !== false){
+        arr.push(search)
+      }
+    }
+    return arr 
+  }
+  
+  
+function binarySearch(arr, val){
+    let start = 0, end = arr.length -1;
+
+    while (start<=end){
+        let mid = Math.floor((start+end)/2);
+        if(arr[mid] === val) return val;
+        else if (arr[mid] > val) end = mid-1;
+        else start = mid+1;  
+    }
+    return false
+}
