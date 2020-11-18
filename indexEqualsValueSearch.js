@@ -10,13 +10,16 @@
 // output: -1 # since no index in arr satisfies arr[i] == i.
 
 
+// O(n)
 function indexEqualsValueSearch(arr) {
     for(let i=0; i<arr.length; i++){
       if(arr[i] == i) return i
     }
     return -1
 }
-  
+
+
+// O(log n) - binary search
 function indexEqualsValueSearch(arr) {
     let start = 0;
     let end = arr.length-1;
