@@ -11,7 +11,7 @@ function averagePair(arr, target){
     return false
 }
 
-// O(n) - multiple pointers
+// O(n) - using pointers
 function averagePair(arr, num){
   let start = 0
   let end = arr.length-1;
